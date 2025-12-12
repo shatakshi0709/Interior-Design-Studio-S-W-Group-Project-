@@ -3,14 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Design Cafe Gallery</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+  <nav class="navbar">
+    <div class="logo">DESIGN<span>CAFE</span></div>
+    <ul class="menu">
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Reviews</a></li>
+      <li><a href="#">Guides</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+    <button class="cta">Get Free Estimate</button>
+  </nav>
 
 
+<div class="filter-container">
+    <button class="filter active" data-page="all.html">All</button>
+    <button class="filter" data-page="modular-kitchen.html">Modular Kitchen</button>
+    <button class="filter" data-page="living-room.html">Living Room</button>
+    <button class="filter" data-page="bedroom.html">Bedroom</button>
+    <button class="filter" data-page="kids-bedroom.html">Kids Bedroom</button>
+    <button class="filter" data-page="dining-room.html">Dining Room</button>
+    <button class="filter" data-page="pooja-room.html">Pooja Room</button>
+    <button class="filter" data-page="space-saving.html">Space Saving</button>
+    <button class="filter" data-page="bathroom.html">Bathroom</button>
+    <button class="filter" data-page="balcony.html">Balcony</button>
+</div>
 
-    <script src="script.js"></script>
+<section class="gallery">
+<div class="card tall" data-page="modular-kitchen.html">
+    <img src="Images/image.png" alt="">
+    <video class="hover-video" src="Videos/kitchen.mp4" muted loop autoplay playsinline preload="auto"></video>
+    <p class="label">Modular Kitchen</p>
+</div>
+
+<div class="card wide" data-page="living-room.html">
+    <img src="Images/PHOTO7.jpg" alt="">
+    <video class="hover-video" src="Videos/living.mp4" muted loop autoplay playsinline preload="auto"></video>
+    <p class="label">Living Room</p>
+</div>
+
+<div class="card" data-page="kids-bedroom.html">
+    <img src="Images/image copy 2.png" alt="">
+    <video class="hover-video" src="Videos/kids.mp4" muted loop autoplay playsinline preload="auto"></video>
+    <p class="label">Kids Bedroom</p>
+</div>
+
+<div class="card" data-page="bedroom.html">
+    <img src="Images/PHOTO.jpg" alt="">
+    <video class="hover-video" src="Videos/Bedroom.mp4" muted loop autoplay playsinline preload="auto"></video>
+    <p class="label">Bedroom</p>
+</div>
+
+<div class="card" data-page="space-saving.html">
+    <img src="Images/image copy 3.png" alt="">
+    <video class="hover-video" src="Videos/space.mp4" muted loop autoplay playsinline preload="auto"></video>
+    <p class="label">Space Saving</p>
+</div>
+
+<div class="card" data-page="pooja-room.html" id="pooja">
+    <img src="Images/Photo 2.jpg" alt="">
+    <video class="hover-video" src="Videos/pooja.mp4" muted loop autoplay playsinline preload="auto"></video>
+    <p class="label">Pooja Room</p>
+</div>
+
+<div class="card" data-page="bathroom.html">
+    <img src="Images/PHOTO6.jpg" alt="">
+    <video class="hover-video" src="Videos/bathroom.mp4" muted loop autoplay playsinline preload="auto"></video>
+    <p class="label">Bathroom</p>
+</div>
+
+<div class="card" data-page="dining-room.html">
+    <img src="Images/PHOTO4.jpg" alt="">
+    <video class="hover-video" src="Videos/Dining Room.mp4" muted loop autoplay playsinline preload="auto"></video>
+    <p class="label">Dining Room</p>
+</div>
+
+<div class="card" data-page="balcony.html">
+    <img src="Images/PHOTO3.jpg" alt="">
+    <video class="hover-video" src="Videos/ Balcony.mp4" muted loop autoplay playsinline preload="auto"></video>
+    <p class="label">Balcony</p>
+</div>
+
+
+</section>
+<section class="how-it-works">
+    <h2>How It Works</h2>
+
+    <div class="steps">
+
+        <div class="step">
+            <div class="icon">📞</div>
+            <h3>Book Consultation</h3>
+            <p>Quick call to understand your requirements & style preferences.</p>
+        </div>
+
+        <div class="step">
+            <div class="icon">🎨</div>
+            <h3>Meet Your Designer</h3>
+            <p>Discuss ideas, layouts, materials and create your dream space.</p>
+        </div>
+
+        <div class="step">
+            <div class="icon">🛋️</div>
+            <h3>Finalize 3D Design</h3>
+            <p>We prepare 3D designs and refine them until you love the result.</p>
+        </div>
+
+        <div class="step">
+            <div class="icon">🏡</div>
+            <h3>Installation & Delivery</h3>
+            <p>Timely delivery with complete installation by our expert team.</p>
+        </div>
+
+    </div>
+</section>
+
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
