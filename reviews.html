@@ -1,0 +1,160 @@
+<html>
+<head>
+
+</head>
+<style>
+    /* Reviews Section */
+.reviews-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.reviews-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+
+.reviews-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  
+    gap: 25px;
+    justify-items: center;
+}
+
+
+.review-card {
+    width: 100%;
+    max-width: 320px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.review-card:hover {
+    transform: scale(1.06) translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+
+.review-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 12px;
+}
+
+
+.review-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+
+.location {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+
+.stars {
+    font-size: 18px;
+    color: #ffb400;
+    margin-bottom: 12px;
+}
+
+/* Review text */
+.review-text {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 900px) {
+    .reviews-container {
+        grid-template-columns: repeat(2, 1fr);  
+    }
+}
+
+@media (max-width: 600px) {
+    .reviews-container {
+        grid-template-columns: repeat(1, 1fr);  /* 1 card on mobile */
+    }
+}
+
+
+</style>
+<body>
+<section class="reviews-section">
+    <h2>Customer Reviews</h2>
+
+    <div class="reviews-container">
+
+        <div class="review-card">
+            <img src="https://i.pravatar.cc/120?img=12" class="review-img">
+            <h3>Aryan Mehta</h3>
+            <p class="location">Mumbai</p>
+            <div class="stars">★★★★★</div>
+            <p class="review-text">
+                Loved the service! The designers understood my taste perfectly.
+                My living room looks stunning now.
+            </p>
+        </div>
+
+        <div class="review-card">
+            <img src="https://i.pravatar.cc/120?img=30" class="review-img">
+            <h3>Riya Kapoor</h3>
+            <p class="location">Bangalore</p>
+            <div class="stars">★★★★★</div>
+            <p class="review-text">
+                Amazing work! Great attention to detail and fantastic execution.
+            </p>
+        </div>
+
+        <div class="review-card">
+            <img src="https://i.pravatar.cc/120?img=55" class="review-img">
+            <h3>Devansh Shah</h3>
+            <p class="location">Delhi</p>
+            <div class="stars">★★★★☆</div>
+            <p class="review-text">
+                Fast delivery and very professional. The modular kitchen is perfect!
+            </p>
+        </div>
+        <div class="review-card">
+    <img src="https://i.pravatar.cc/120?img=47" class="review-img">
+    <h3>Sneha Verma</h3>
+    <p class="location">Hyderabad</p>
+    <div class="stars">★★★★★</div>
+    <p class="review-text">
+        Incredible service! My bedroom makeover is exactly what I wanted.
+        The lighting and wall textures were done beautifully.
+    </p>
+</div>
+
+<div class="review-card">
+    <img src="https://i.pravatar.cc/120?img=68" class="review-img">
+    <h3>Rohit Narang</h3>
+    <p class="location">Pune</p>
+    <div class="stars">★★★★☆</div>
+    <p class="review-text">
+        Very happy with the final results. The team was friendly and the design
+        suggestions were practical and stylish.
+    </p>
+</div>
+
+
+    </div>
+</section>
+</body>
+</html>

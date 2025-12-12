@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | DesignCafe</title>
+  <link rel="stylesheet" href="about.css" />
+  <!-- Optional Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #faf7f4;
+  color: #222;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 60px;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.logo span {
+  color: #007a85;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #444;
+  font-size: 15px;
+  transition: color 0.2s ease;
+}
+
+.menu li a:hover,
+.menu li a.active {
+  color: #007a85;
+}
+
+.cta {
+  background: #c21f1f;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  background: #a51717;
+}
+
+/* Hero Section */
+.about-hero {
+  max-width: 1200px;
+  margin: 60px auto 30px;
+  padding: 40px 30px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-content {
+  flex: 1.5;
+}
+
+.tagline {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #007a85;
+  margin-bottom: 10px;
+}
+
+.about-hero h1 {
+  font-size: 40px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.hero-text {
+  font-size: 16px;
+  color: #555;
+  max-width: 520px;
+}
+
+.hero-card {
+  flex: 1;
+  background: radial-gradient(circle at top left, #ffe7c2, #ffc9b5, #f5f5f5);
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-card p {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  color: #3a2a1b;
+}
+
+/* Main About Section */
+.about-main {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  padding: 0 30px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 40px;
+}
+
+.about-left h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.about-left p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #4d4d4d;
+  margin-bottom: 14px;
+}
+
+/* Right Side Cards */
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.info-card {
+  background: #ffffff;
+  padding: 20px 22px;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.info-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.info-card p,
+.info-card li {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.info-card ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+/* Mini stats grid */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.stat {
+  background: #ffffff;
+  padding: 14px 16px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+}
+
+.stat span {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #007a85;
+  margin-bottom: 4px;
+}
+
+.stat p {
+  font-size: 13px;
+  color: #555;
+}
+
+/* CTA Section */
+.about-cta {
+  text-align: center;
+  padding: 60px 20px 80px;
+  background: linear-gradient(135deg, #fff7ea, #ffe7d6);
+}
+
+.about-cta h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.about-cta p {
+  max-width: 600px;
+  margin: 0 auto 22px;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.cta.large {
+  padding: 12px 30px;
+  font-size: 15px;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .about-hero {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .hero-content,
+  .hero-card {
+    width: 100%;
+  }
+
+  .about-main {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    padding: 14px 18px;
+  }
+  .menu {
+    display: none; /* simple mobile version; you can replace with hamburger later */
+  }
+  .about-hero {
+    padding: 30px 18px;
+  }
+  .about-main {
+    padding: 0 18px;
+  }
+}
+
+</style>
+<body>
+
+  <!-- Navbar (you can match this with your main site) -->
+  <nav class="navbar">
+    <div class="logo">NOOR<span>INTERIOR</span></div>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#" class="active">About Us</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="cta">Get Free Estimate</button>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="about-hero">
+    <div class="hero-content">
+      <p class="tagline">About DesignCafe</p>
+      <h1>Design is art. Your home is the canvas.</h1>
+      <p class="hero-text">
+        DesignCafe is a space for design lovers, dreamers, and creators.  
+        We curate interiors that push boundaries — modern, dramatic, elegant, and unforgettable.
+      </p>
+    </div>
+    <div class="hero-card">
+      <p>“We’re here to inspire the masterpiece you call home.”</p>
+    </div>
+  </section>
+
+  <!-- Main About Content -->
+  <section class="about-main">
+    <div class="about-left">
+      <h2>Who We Are</h2>
+      <p>
+        DesignCafe is a space for design lovers, dreamers, and creators. We curate interiors that
+        push boundaries — modern, dramatic, elegant, and unforgettable. Every post is crafted to
+        inspire new ideas, spark creativity, and help you see your space in a completely new way.
+      </p>
+      <p>
+        We explore the latest trends, timeless classics, bold color palettes, texture play,
+        lighting magic, décor styling and more. From chic balconies to high-end bathrooms, from
+        workspace minimalism to luxe lounges — we bring you the best of global design.
+      </p>
+      <p>
+        If you love interiors that make a statement, you’ll feel right at home here.  
+        Design is art. Your home is the canvas. We’re here to inspire the masterpiece.
+      </p>
+    </div>
+
+    <div class="about-right">
+      <div class="info-card">
+        <h3>What You’ll Find Here</h3>
+        <ul>
+          <li>Curated interior design inspiration for every room.</li>
+          <li>Ideas that blend function, comfort, and bold aesthetics.</li>
+          <li>Styling tips you can use in real homes.</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3>Our Style</h3>
+        <p>
+          We love spaces that tell a story — dramatic feature walls,
+          warm lights, layered textures, and décor that feels personal.
+        </p>
+      </div>
+
+      <div class="info-grid">
+        <div class="stat">
+          <span>Modern</span>
+          <p>Clean lines, smart storage, and fresh layouts.</p>
+        </div>
+        <div class="stat">
+          <span>Dramatic</span>
+          <p>Bold statements with color, art, and lighting.</p>
+        </div>
+        <div class="stat">
+          <span>Elegant</span>
+          <p>Soft finishes, balance, and timeless design.</p>
+        </div>
+        <div class="stat">
+          <span>Unforgettable</span>
+          <p>Spaces that always feel uniquely you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="about-cta">
+    <h2>Ready to reimagine your space?</h2>
+    <p>
+      Whether it’s a cozy corner, a full home makeover, or just one room that needs magic —  
+      DesignCafe is here to guide your next design story.
+    </p>
+    <button class="cta large">Book a Free Design Consultation</button>
+  </section>
+
+</body>
+</html>
